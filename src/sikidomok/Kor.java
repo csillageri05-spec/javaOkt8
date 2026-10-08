@@ -1,6 +1,6 @@
 package sikidomok;
 
-public class Kor {
+public class Kor extends Sikidom{
 
     private double r;
 

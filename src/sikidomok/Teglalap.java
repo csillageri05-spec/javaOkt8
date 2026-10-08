@@ -1,6 +1,6 @@
 package sikidomok;
 
-public class Teglalap {
+public class Teglalap extends Sikidom{
 
     private int a;
     private int b;
@@ -10,11 +10,11 @@ public class Teglalap {
         this.b = b;
     }
 
-    public int terulet() {
+    public double terulet() {
         return a * b;
     }
 
-    public int kerulet() {
+    public double kerulet() {
         return 2 * a + 2 * b;
     }
 

@@ -5,7 +5,11 @@ public abstract class Sikidom {
     public Sikidom() {
     }
 
-    public abstract void kerulet();
+    public abstract double kerulet();
 
-    public abstract void terulet();
+    public abstract double terulet();
+
+    public void teruletKiir() {
+        System.out.println("terulet: " + terulet());
+    }
 }

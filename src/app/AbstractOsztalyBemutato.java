@@ -4,12 +4,13 @@ import allatok.Allat;
 import allatok.Kutya;
 import allatok.Macska;
 import sikidomok.Kor;
+import sikidomok.Sikidom;
 import sikidomok.Teglalap;
 
 public class AbstractOsztalyBemutato {
 
     public static void main(String[] args) {
-        AllatosBemutato();
+        //AllatosBemutato();
 
         SikidomokBemutato();
 
@@ -23,13 +24,19 @@ public class AbstractOsztalyBemutato {
         System.out.println("Kör adatai:");
         System.out.printf("Kör sugara: %.2f\nKör kerülete: %.2f\nKör területe: %.2f\n", r, k, t);
 
-        Teglalap tegla = new Teglalap(3, 4);
-        int a = tegla.getA();
-        int b = tegla.getB();
-        int tk = tegla.kerulet();
-        int tt = tegla.terulet();
+        Teglalap teglalap = new Teglalap(3, 4);
+        int a = teglalap.getA();
+        int b = teglalap.getB();
+        double tk = teglalap.kerulet();
+        double tt = teglalap.terulet();
         System.out.println("tégla adatai:");
         System.out.printf("téglalap a: %d\ntéglalap b: %d\ntéglalap kerülete: %d\ntéglalap területe: %d\n", a, b, tk, tt);
+
+        Sikidom[] sikidomok = {kor, teglalap};
+        for (Sikidom sikidom : sikidomok) {
+            sikidom.teruletKiir();
+        }
+
     }
 
     private static void AllatosBemutato() {
